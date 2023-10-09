@@ -25,5 +25,16 @@ public class LoginPage extends BaseTest {
 		loginPage.login("superadmin@hyperlocology.com","Ps@1234");
 		Assert.assertEquals(loginPage.loginErrorMessage(),"wrong passwrod please enter correct password");
 	}
+	@Test
+	public void forgotpasswordValidation() {
+		loginPage.forgotPassword("Pushp@yopmail.com");
+		Assert.assertEquals("wrong Email id",loginPage.loginErrorMessage());
+	}
+	@Test
+	public void logoutValidation() {
+		loginPage.login("superadmin@hyperlocology.com", "Hyper@2023");
+        loginPage.logout();
+        Assert.assertEquals(loginPage.LoginPageTitle(),"Sign in to continue with Hyperlocology");
+	}
 	
 }

@@ -25,19 +25,48 @@ public class LandingPage extends AbstractComponents{
 	    WebElement loginButton;
 	    @FindBy(css=".toast-message")
 	    WebElement errormsg;
-
-	public void login(String userEmail, String password) {
+	    @FindBy(css="a[href='/forgot-password']")
+	    WebElement forgotPassword;
+	    @FindBy(name="email")
+	    WebElement email;
+	    @FindBy(css=".dropdown-item.pl-2:nth-of-type(2)")
+	    WebElement logoutBtn;
+	    @FindBy(css="img[alt='profile-user']")
+	    WebElement userProfile;
+	    @FindBy(css=".swal2-actions button:last-child")
+	    WebElement yesBtn;
+        @FindBy(tagName="p")
+        WebElement title;
+        
+        
+	public ParentCompanies login(String userEmail, String password) {
 		waitingForElementToBeVisible(userName);
     	userName.sendKeys(userEmail);
     	userPassword.sendKeys(password);
     	loginButton.click();
-    	
+    	ParentCompanies parentCompnaies=new ParentCompanies(driver);
+    	return parentCompnaies;
     }
 	public String loginErrorMessage() {
 		return errormsg.getText();
 	}
     public void goTO() {
     	driver.get("https://dev-admin.hyperlocology.com/");
+    }
+    public void forgotPassword(String registerdEmail) {
+    	forgotPassword.click();
+    	email.sendKeys(registerdEmail);
+    	loginButton.click();
+    }
+    public void logout() {
+    	waitingForElementToBeVisible(userProfile);
+    	userProfile.click();
+    	logoutBtn.click();
+    	waitingForElementToBeVisible(yesBtn);
+    	yesBtn.click();
+    }
+    public String LoginPageTitle() {
+    	return title.getText();
     }
 
 

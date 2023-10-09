@@ -5,9 +5,9 @@
     <classes>
       <class name="Softude.Hyperlocology.Tests.LoginPage">
         <methods>
-          <include name="loginWithIncorrectPassword"/>
           <include name="lauchApplication"/>
           <include name="tearDown"/>
+          <include name="logoutValidation"/>
         </methods>
       </class> <!-- Softude.Hyperlocology.Tests.LoginPage -->
     </classes>
