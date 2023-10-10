@@ -20,10 +20,58 @@ public class ParentCompanies extends AbstractComponents {
 	WebElement parentCompanies;
 	@FindBy(css="a[href='company/add']")
 	WebElement addBtn;
+	@FindBy(name="company_name")
+	WebElement companyName;
+	@FindBy(name="first_name")
+	WebElement fristName;
+	@FindBy(name="last_name")
+	WebElement lastName;
+	@FindBy(name="email")
+	WebElement compEmail;
+	@FindBy(name="mobile_no")
+	WebElement mobileNo;
+	@FindBy(css=".slider.round")
+	WebElement emailNotification;
+	@FindBy(id="input-file-now")
+	WebElement attachlogo;
+	@FindBy(css="div[class='normal-slider round']")
+	WebElement status;
+	@FindBy(css="button[value='Save']")
+	WebElement saveBtn; 
+	@FindBy(css="button[value='Save & Add Brands']")
+	WebElement saveAndAddBrands;
+	@FindBy(id="brandLink")
+	WebElement brandsPage;
 	
-	public void addParentCompany() {
+	public void addParentCompany(String CompanyName,String FirstName,String LastName,String email, String MobileNo) {
 		parentCompanies.click();
 		waitingForElementToBeVisible(addBtn);
 		addBtn.click();
+		companyName.sendKeys(CompanyName);
+		fristName.sendKeys(FirstName);
+		lastName.sendKeys(LastName);
+		compEmail.sendKeys(MobileNo);
 	}
+	public void sendEmailNotification() {
+		emailNotification.click();
+	}
+	public void setStatusAsInactive() {
+		status.click();
+	}
+	public void attachCompanyLogo(String logopath) {
+		attachlogo.sendKeys(logopath);
+	}
+	public void saveParentCompany() {
+		saveBtn.click();
+	}
+	public void saveAndAddBrands() {
+		saveAndAddBrands.click();
+	}
+	public Brands goToBrandsPage() {
+		waitingForElementToBeVisible(brandsPage);
+		Brands brands=new Brands(driver);
+		brandsPage.click();
+		return brands;
+	}
+	
 }

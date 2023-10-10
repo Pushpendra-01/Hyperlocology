@@ -7,7 +7,7 @@ import Softude.Hyperlocology.TestComponents.BaseTest;
 import Softude.Hyperlocology.TestComponents.Retry;
 import Softude.Hyperlocology.pageobjects.LandingPage;
 
-public class LoginPage extends BaseTest {
+public class LoginPageTest extends BaseTest {
 
 	@Test
 	public void loginWithValidCredentials() {
