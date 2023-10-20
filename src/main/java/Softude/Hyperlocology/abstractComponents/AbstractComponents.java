@@ -1,7 +1,9 @@
 package Softude.Hyperlocology.abstractComponents;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,5 +27,13 @@ public class AbstractComponents {
 	public void waitingForElementToBeClickable(WebElement webelement) {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(webelement));
+	}
+	public void waitingForInvisibilityofOverlappingElement() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("overlay")));
+	}
+	public void waitingForVisibilityOfAllTheElement(List<WebElement>element) {
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfAllElements(element));
 	}
 }

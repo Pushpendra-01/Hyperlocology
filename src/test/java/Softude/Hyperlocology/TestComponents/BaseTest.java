@@ -65,9 +65,9 @@ public class BaseTest {
 		return loginPage;
 	}
 
-	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-		driver.close();
-	}
+//	@AfterMethod(alwaysRun = true)
+//	public void tearDown() {
+//		driver.close();
+//	}
 
 }

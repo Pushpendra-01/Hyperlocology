@@ -42,6 +42,8 @@ public class ParentCompanies extends AbstractComponents {
 	WebElement saveAndAddBrands;
 	@FindBy(id="brandLink")
 	WebElement brandsPage;
+	@FindBy(id="parsley-id-11")
+	WebElement errorMessage;
 	
 	public void addParentCompany(String CompanyName,String FirstName,String LastName,String email, String MobileNo) {
 		parentCompanies.click();
@@ -50,7 +52,8 @@ public class ParentCompanies extends AbstractComponents {
 		companyName.sendKeys(CompanyName);
 		fristName.sendKeys(FirstName);
 		lastName.sendKeys(LastName);
-		compEmail.sendKeys(MobileNo);
+		compEmail.sendKeys(email);
+		mobileNo.sendKeys(MobileNo);
 	}
 	public void sendEmailNotification() {
 		emailNotification.click();
@@ -72,6 +75,10 @@ public class ParentCompanies extends AbstractComponents {
 		Brands brands=new Brands(driver);
 		brandsPage.click();
 		return brands;
+	}
+	public String getErrorMessage() {
+		return errorMessage.getText();
+		
 	}
 	
 }

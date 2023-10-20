@@ -7,7 +7,6 @@
         <methods>
           <include name="lauchApplication"/>
           <include name="addNewBrand"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- Softude.Hyperlocology.Tests.BrandsTest -->
     </classes>
