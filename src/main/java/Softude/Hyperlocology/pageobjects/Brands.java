@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -75,18 +76,18 @@ public class Brands extends AbstractComponents{
 	WebElement paymentBtn;
 	@FindBy(xpath="(//label[@class='switch'])[2]")
 	WebElement emailNotificationBtn;
-    @FindBy(xpath="(//label[@class='switch'])[3]")
+    @FindBy(css="div[class='normal-slider round']")
     WebElement statusBtn;
-    @FindBy(id="is_auto_renewal")
+    @FindBy(xpath="(//label[@class='switch'])[3]")
     WebElement autoRenewBtn;
     @FindBy(name="brand_logo")
     WebElement brandlogoBtn;  
     @FindBy(css=".swal2-confirm.swal2-styled")
     WebElement confirmBtn;   
-    @FindBy(id="dashboard_last_updated")
+    @FindBy(xpath="(//input[@placeholder='Please select date'])[3]")
     WebElement lastUpdate;
-    
-
+    @FindBy(css="button[value='Save & Next']")
+    WebElement saveAndNextBtn;        
 	public void fillBrandsDetails(String BrandName,String FirstName,String LastName,String Email,String MobileNo) {
 		addBtn.click();
 		waitingForElementToBeVisible(brandName);
@@ -166,43 +167,23 @@ public class Brands extends AbstractComponents{
      public void ChangeStatus() {
     	 statusBtn.click();
      }
-     public void activeAutoRenew() throws InterruptedException {
+     public void activeAutoRenew() {
     	 autoRenewBtn.click();
-//    	 waitingForElementToBeVisible(confirmBtn);
-    	Thread.sleep(2000);
+    	 waitingForElementToBeVisible(confirmBtn);
+
     	 confirmBtn.click();
      }
      public void uploadBrandLogo(String brandLogoPath) {
     	 brandlogoBtn.sendKeys(brandLogoPath);
+    	 
      }
-     public void selectDashboardLastUpdate(String Month,String Year,String Date) {
+     public void selectDashboardLastUpdate() throws InterruptedException  {
+    	 Thread.sleep(1000);
+    	 JavascriptExecutor js=(JavascriptExecutor)driver;
+    	 js.executeScript("window.scrollBy(0,600);");
+    	 Thread.sleep(1000);
     	 lastUpdate.click();
-    		waitingForElementToBeVisible(month);
-    		
-    		while(true) {
-    			String selectedMonth=month.getText();
-//    	        System.out.println(selectedMonth);
-    			if(selectedMonth.equals(Month)) {
-    				break;
-    			}
-    			else {
-    				nextBtn.click();
-    			}
-    		}
-            while(true) {
-            	String selectedYear=year.getText();
-            	if(selectedYear.equals(Year)) {
-            		break;
-            	}
-            	else {
-            		nextBtn.click();
-            	}
-            }
-            WebElement optDate = dateOpt.stream()
-             	    .filter(d -> d.getText().equalsIgnoreCase(Date))
-             	    .findFirst()
-             	    .orElseThrow(() -> new NoSuchElementException("Date option not found"));
-             	optDate.click();
+    	  
     	}
 
 }

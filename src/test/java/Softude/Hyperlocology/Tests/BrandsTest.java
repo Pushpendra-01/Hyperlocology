@@ -21,8 +21,10 @@ public class BrandsTest extends BaseTest{
 		brands.disablePaymentThroughPortal();
 		brands.sendEmailNotification();
 		brands.ChangeStatus();
+		brands.activeAutoRenew();
 		brands.uploadBrandLogo("C:\\Users\\Sipl\\Downloads\\companylogo.jpg");
-		brands.selectDashboardLastUpdate("January","2024","12");
+		brands.selectDashboardLastUpdate();
+		
 	}
 	
 	
