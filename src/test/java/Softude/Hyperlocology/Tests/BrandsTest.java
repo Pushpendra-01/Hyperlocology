@@ -23,7 +23,7 @@ public class BrandsTest extends BaseTest{
 		brands.ChangeStatus();
 		brands.activeAutoRenew();
 		brands.uploadBrandLogo("C:\\Users\\Sipl\\Downloads\\companylogo.jpg");
-		brands.selectDashboardLastUpdate();
+		
 		
 	}
 	

@@ -177,13 +177,13 @@ public class Brands extends AbstractComponents{
     	 brandlogoBtn.sendKeys(brandLogoPath);
     	 
      }
-     public void selectDashboardLastUpdate() throws InterruptedException  {
+     public void selectDashboardLastUpdate(String Month,String Year, String Date) throws InterruptedException  {
     	 Thread.sleep(1000);
     	 JavascriptExecutor js=(JavascriptExecutor)driver;
     	 js.executeScript("window.scrollBy(0,600);");
     	 Thread.sleep(1000);
     	 lastUpdate.click();
-    	  
+    	 
     	}
 
 }
