@@ -86,8 +86,19 @@ public class Brands extends AbstractComponents{
     WebElement confirmBtn;   
     @FindBy(xpath="(//input[@placeholder='Please select date'])[3]")
     WebElement lastUpdate;
+    @FindBy(css="button[value='Save']")
+    WebElement saveBtn;
     @FindBy(css="button[value='Save & Next']")
-    WebElement saveAndNextBtn;        
+    WebElement saveAndNextBtn; 
+    @FindBy(name="file_name")
+    WebElement fileNameInput;
+    @FindBy(id="input-file-now")
+    WebElement attachmentFile; 
+    @FindBy(css=".btn-primary")
+    WebElement addButton;
+    
+    
+    
 	public void fillBrandsDetails(String BrandName,String FirstName,String LastName,String Email,String MobileNo) {
 		addBtn.click();
 		waitingForElementToBeVisible(brandName);
@@ -100,7 +111,15 @@ public class Brands extends AbstractComponents{
 	public void selectStartDate(String Month,String Year,String Date) {
 		startDate.click();
 		waitingForElementToBeVisible(month);
-		
+		 while(true) {
+	        	String selectedYear=year.getText();
+	        	if(selectedYear.equals(Year)) {
+	        		break;
+	        	}
+	        	else {
+	        		nextBtn.click();
+	        	}
+	        }
 		while(true) {
 			String selectedMonth=month.getText();
 //	        System.out.println(selectedMonth);
@@ -111,15 +130,7 @@ public class Brands extends AbstractComponents{
 				nextBtn.click();
 			}
 		}
-        while(true) {
-        	String selectedYear=year.getText();
-        	if(selectedYear.equals(Year)) {
-        		break;
-        	}
-        	else {
-        		nextBtn.click();
-        	}
-        }
+       
         WebElement optDate = dateOpt.stream()
          	    .filter(d -> d.getText().equalsIgnoreCase(Date))
          	    .findFirst()
@@ -177,13 +188,46 @@ public class Brands extends AbstractComponents{
     	 brandlogoBtn.sendKeys(brandLogoPath);
     	 
      }
-     public void selectDashboardLastUpdate() throws InterruptedException  {
+     public void selectDashboardLastUpdate(String Month,String Year,String Date) throws InterruptedException  {
     	 Thread.sleep(1000);
     	 JavascriptExecutor js=(JavascriptExecutor)driver;
     	 js.executeScript("window.scrollBy(0,600);");
     	 Thread.sleep(1000);
     	 lastUpdate.click();
-    	  
+    	 while(true) {
+    		 String currentYear=year.getText();
+    		 if(currentYear.equalsIgnoreCase(Year)) {
+    			 break;
+    		 }
+    		 else {
+    			 nextBtn.click();
+    		 }
+    	 }
+    	 while(true) {
+    		 String currentMonth=month.getText();
+    		 if(currentMonth.equalsIgnoreCase(Month)) {
+    			 break;
+    		 }
+    		 else {
+    			 nextBtn.click();
+    		 }
+    	 }
+    	 
+    	 WebElement currentDate=dateOpt.stream().filter(d->d.getText().equalsIgnoreCase(Date)).findFirst()
+    	 .orElseThrow(()-> new NoSuchElementException("No such date found please enter the valid date"));
+    	 currentDate.click();
     	}
-
+      public void saveBrand() {
+    	  saveBtn.click();
+      }
+      public void saveAndGoToAttachCollateralPage() {
+    	  saveAndNextBtn.click();
+      }
+      public void attachCollateral(String FileName,String attachedFilePath) {
+    	  waitingForElementToBeVisible(fileNameInput);
+    	  fileNameInput.sendKeys(FileName);
+    	  attachmentFile.sendKeys(attachedFilePath);
+    	  addButton.click();
+      }
+       
 }

@@ -12,7 +12,7 @@ public class BrandsTest extends BaseTest{
 	public void addNewBrand() throws InterruptedException {
 		ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
 		Brands brands=parentCompanies.goToBrandsPage();
-		brands.fillBrandsDetails("Automated Brand","Softue","Systematrix","softude@yopmail.com","8745963210");
+		brands.fillBrandsDetails("Automated Bran","Softue","Systematrix","softude@yopmail.in","8745963210");
 		brands.selectStartDate("December","2023","11");
 		brands.selectSubscriptionMonth("20");
 		brands.fillSubscriptionDeatils("Hello this subscription deatils is filled by the automation script");
@@ -22,9 +22,10 @@ public class BrandsTest extends BaseTest{
 		brands.sendEmailNotification();
 		brands.ChangeStatus();
 		brands.activeAutoRenew();
-		brands.uploadBrandLogo("C:\\Users\\Sipl\\Downloads\\companylogo.jpg");
-		brands.selectDashboardLastUpdate();
-		
+		brands.uploadBrandLogo("C:\\Users\\asus\\Downloads\\Html toutorial\\Portfolio\\copmanyLogo.jpeg");
+		brands.selectDashboardLastUpdate("March","2027","12");
+		brands.saveAndGoToAttachCollateralPage();
+		brands.attachCollateral("Automation_File","C:\\Users\\asus\\Downloads\\Html toutorial\\Portfolio\\copmanyLogo.jpg");
 	}
 	
 	
