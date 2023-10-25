@@ -87,7 +87,10 @@ public class Brands extends AbstractComponents{
     @FindBy(xpath="(//input[@placeholder='Please select date'])[3]")
     WebElement lastUpdate;
     @FindBy(css="button[value='Save & Next']")
-    WebElement saveAndNextBtn;        
+    WebElement saveAndNextBtn;  
+    @FindBy(css="button[value='Save']")
+    WebElement saveBtn;    
+
 	public void fillBrandsDetails(String BrandName,String FirstName,String LastName,String Email,String MobileNo) {
 		addBtn.click();
 		waitingForElementToBeVisible(brandName);
@@ -183,7 +186,33 @@ public class Brands extends AbstractComponents{
     	 js.executeScript("window.scrollBy(0,600);");
     	 Thread.sleep(1000);
     	 lastUpdate.click();
-    	 
-    	}
-
+    	 while(true) {
+    		 String currentYear=year.getText();
+    		 if(currentYear.equalsIgnoreCase(Year)) {
+    			 break;
+    		 }
+    		 else {
+    			 nextBtn.click();
+    		 }
+    	 }
+         while(true) {
+        	 String currentMonth=month.getText();
+        	 if(currentMonth.equalsIgnoreCase(Month)) {
+    			 break;
+    		 }
+        	 else {
+        		 nextBtn.click();
+        	 }
+         }
+    		 WebElement currentDate = dateOpt.stream()
+    	         	    .filter(d -> d.getText().equalsIgnoreCase(Date))
+    	         	    .findFirst()
+    	         	    .orElseThrow(() -> new NoSuchElementException("Date option not found"));
+    	         	currentDate.click();
+    	 }
+     public void saveBrand() {
+    	 saveBtn.click();
+     }
 }
+
+
