@@ -76,6 +76,12 @@ public class ParentCompanies extends AbstractComponents {
 		brandsPage.click();
 		return brands;
 	}
+	public EditBrandPage goToBrandsPages() {
+		waitingForElementToBeVisible(brandsPage);
+		EditBrandPage editBrand=new EditBrandPage(driver);
+		brandsPage.click();
+		return editBrand;
+	}
 	public String getErrorMessage() {
 		return errorMessage.getText();
 		

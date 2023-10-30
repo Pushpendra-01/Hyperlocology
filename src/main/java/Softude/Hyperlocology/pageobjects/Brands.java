@@ -90,7 +90,10 @@ public class Brands extends AbstractComponents{
     WebElement saveAndNextBtn;  
     @FindBy(css="button[value='Save']")
     WebElement saveBtn;    
-
+    @FindBy(id="brandLink")
+	WebElement brandsPage;
+    
+    
 	public void fillBrandsDetails(String BrandName,String FirstName,String LastName,String Email,String MobileNo) {
 		addBtn.click();
 		waitingForElementToBeVisible(brandName);
@@ -212,6 +215,12 @@ public class Brands extends AbstractComponents{
     	 }
      public void saveBrand() {
     	 saveBtn.click();
+     }
+     public Brands editBrands() {
+    	 waitingForElementToBeVisible(brandsPage);
+ 		Brands brands=new Brands(driver);
+ 		brandsPage.click();
+ 		return brands;
      }
 }
 
