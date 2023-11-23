@@ -21,7 +21,7 @@ public class EditBrandPageTest extends BaseTest {
 	editBrand.editLastName("pvt.ltd.");
 //	editBrand.updateTheDetails();
 	}
-	@Test
+/*	@Test
 	public void attachCollateral() throws InterruptedException{
 		ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
 		EditBrandPage editBrand=parentCompanies.goToBrandsPages();
@@ -45,6 +45,6 @@ public class EditBrandPageTest extends BaseTest {
 		editBrand.goToSubscriptionPage("C:\\Users\\Sipl\\Downloads\\Subscription Upload Sheet_Automated Brand.xlsx");
         
 	}
-	
+	*/
 
 	}

@@ -47,7 +47,7 @@ public class ParentCompanies extends AbstractComponents {
 	
 	public void addParentCompany(String CompanyName,String FirstName,String LastName,String email, String MobileNo) {
 		parentCompanies.click();
-		waitingForElementToBeVisible(addBtn);
+		waitingForElementToBeClickable(addBtn);
 		addBtn.click();
 		companyName.sendKeys(CompanyName);
 		fristName.sendKeys(FirstName);
