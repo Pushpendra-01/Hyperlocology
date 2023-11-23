@@ -203,7 +203,7 @@
     </profile>
     
      <profile>
-      <id>Brands_Regression</id>
+      <id>Regression</id>
       <build>
         <plugins>
           <plugin>
