@@ -153,6 +153,7 @@ public class Brands extends AbstractComponents{
     	 WebElement region=regions.stream().filter(opt->opt.getText().equalsIgnoreCase(regionName)).findFirst()
     			 .orElseThrow(()->new NoSuchElementException("This region is not available"));
     	 region.click();
+    	
      }
      public void selectParentComapny(String parentCompanyName) {
     	 driver.switchTo().defaultContent();

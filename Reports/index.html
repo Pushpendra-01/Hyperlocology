@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Hyperlocology Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 9, 2023 11:48:31 AM</span></a>
+<a href="#"><span class="badge badge-primary">Nov 23, 2023 02:10:12 PM</span></a>
 </li>
 </ul>
 </div>
@@ -80,14 +80,54 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">forgotpasswordValidation</p>
+            <p class="name">addParentCompany</p>
             <p class="text-sm">
-              <span>11:48:38 AM</span> / <span>00:00:05:109</span>
+              <span>2:10:19 PM</span> / <span>00:00:12:488</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">addParentCompany</h5>
+<span class='badge badge-success'>11.23.2023 2:10:19 PM</span>
+<span class='badge badge-danger'>11.23.2023 2:10:31 PM</span>
+<span class='badge badge-default'>00:00:12:488</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:10:31 PM</td>
+        <td>
+          TestPassed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">wrongEmailErrorValidation</p>
+            <p class="text-sm">
+              <span>2:10:36 PM</span> / <span>00:00:11:176</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,18 +135,18 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">forgotpasswordValidation</h5>
-<span class='badge badge-success'>10.09.2023 11:48:38 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:48:44 AM</span>
-<span class='badge badge-default'>00:00:05:109</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<h5 class="test-status text-fail">wrongEmailErrorValidation</h5>
+<span class='badge badge-success'>11.23.2023 2:10:36 PM</span>
+<span class='badge badge-danger'>11.23.2023 2:10:48 PM</span>
+<span class='badge badge-default'>00:00:11:176</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
 </div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\Sipl\AutomationProjects\Hyperlocology//Reports//forgotpasswordValidation.png' src="C:\Users\Sipl\AutomationProjects\Hyperlocology//Reports//forgotpasswordValidation.png">
-    <div class="title">forgotpasswordValidation</div>
+<img data-featherlight='C:\Users\Sipl\Automation\Hyperlocology//Reports//wrongEmailErrorValidation.png' src="C:\Users\Sipl\Automation\Hyperlocology//Reports//wrongEmailErrorValidation.png">
+    <div class="title">wrongEmailErrorValidation</div>
     </div></div>
 <div class="detail-body mt-4">
 <table class="table table-sm">
@@ -114,16 +154,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:48:43 AM</td>
+        <td>2:10:47 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [Entered email id is incorrect, try again.] but found [wrong Email id]
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [This value seems to be invalid.] but found [This value should be a valid email.]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation(LoginPageTest.java:31)
+	at Softude.Hyperlocology.Tests.ParentCompaniesTest.wrongEmailErrorValidation(ParentCompaniesTest.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -147,276 +187,15 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 	at org.testng.TestNG.runSuites(TestNG.java:1099)
 	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
           
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithIncorrectPassword</p>
-            <p class="text-sm">
-              <span>11:48:52 AM</span> / <span>00:00:00:007</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginWithIncorrectPassword</h5>
-<span class='badge badge-success'>10.09.2023 11:48:52 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:48:52 AM</span>
-<span class='badge badge-default'>00:00:00:007</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div>          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithIncorrectPassword</p>
-            <p class="text-sm">
-              <span>11:49:00 AM</span> / <span>00:00:02:601</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">loginWithIncorrectPassword</h5>
-<span class='badge badge-success'>10.09.2023 11:49:00 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:49:03 AM</span>
-<span class='badge badge-default'>00:00:02:601</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\Sipl\AutomationProjects\Hyperlocology//Reports//loginWithIncorrectPassword.png' src="C:\Users\Sipl\AutomationProjects\Hyperlocology//Reports//loginWithIncorrectPassword.png">
-    <div class="title">loginWithIncorrectPassword</div>
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:49:02 AM</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at Softude.Hyperlocology.Tests.LoginPageTest.loginWithIncorrectPassword(LoginPageTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithValidCredentials</p>
-            <p class="text-sm">
-              <span>11:49:08 AM</span> / <span>00:00:05:736</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginWithValidCredentials</h5>
-<span class='badge badge-success'>10.09.2023 11:49:08 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:49:14 AM</span>
-<span class='badge badge-default'>00:00:05:736</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:49:14 AM</td>
-        <td>
-          TestPassed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginwithIncorrectEmail</p>
-            <p class="text-sm">
-              <span>11:49:19 AM</span> / <span>00:00:02:029</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginwithIncorrectEmail</h5>
-<span class='badge badge-success'>10.09.2023 11:49:19 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:49:21 AM</span>
-<span class='badge badge-default'>00:00:02:029</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:49:21 AM</td>
-        <td>
-          TestPassed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">logoutValidation</p>
-            <p class="text-sm">
-              <span>11:49:27 AM</span> / <span>00:00:08:153</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">logoutValidation</h5>
-<span class='badge badge-success'>10.09.2023 11:49:27 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:49:35 AM</span>
-<span class='badge badge-default'>00:00:08:153</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:49:35 AM</td>
-        <td>
-          TestPassed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">addParentCompany</p>
-            <p class="text-sm">
-              <span>11:49:40 AM</span> / <span>00:00:11:959</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">addParentCompany</h5>
-<span class='badge badge-success'>10.09.2023 11:49:40 AM</span>
-<span class='badge badge-danger'>10.09.2023 11:49:52 AM</span>
-<span class='badge badge-default'>00:00:11:959</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:49:52 AM</td>
-        <td>
-          TestPassed
         </td>
       </tr>
   </tbody>
@@ -444,15 +223,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">2 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -465,16 +244,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>11:48:38 AM</td>
+<td>14:10:36 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>forgotpasswordValidation</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:49:00 AM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='3'>loginWithIncorrectPassword</a>
+<a href="#" class="linked" test-id='2' id='2'>wrongEmailErrorValidation</a>
 </td>
 </tr>
 </tbody>
@@ -494,25 +266,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 9, 2023 11:48:31 AM</h3>
+<h3>Nov 23, 2023 02:10:12 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 9, 2023 11:49:52 AM</h3>
+<h3>Nov 23, 2023 02:10:48 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>5</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -528,12 +300,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='71%'>
-<b>5</b> tests passed
+<div><small data-tooltip='50%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='28%'><b>2</b> tests failed,
+<small data-tooltip='50%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -551,9 +323,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='66%'><b>4</b> events passed</small></div>
+<div><small data-tooltip='50%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='33%'><b>2</b> events failed,
+<small data-tooltip='50%'><b>1</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -570,7 +342,7 @@
 </div></div>
 <script>
 var timeline = {
-"forgotpasswordValidation":5.109,"loginWithIncorrectPassword":0.007,"loginWithIncorrectPassword":2.601,"loginWithValidCredentials":5.736,"loginwithIncorrectEmail":2.029,"logoutValidation":8.153,"addParentCompany":11.959
+"addParentCompany":12.488,"wrongEmailErrorValidation":11.176
 };
 </script>
 <div class="row">
@@ -593,8 +365,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 5,
-failParent: 2,
+passParent: 1,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -610,8 +382,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 4,
-failEvents: 2,
+passEvents: 1,
+failEvents: 1,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

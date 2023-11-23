@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/2/1</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 09 11:45:07 IST 2023</td>
+<td>Started on:</td><td>Wed Nov 22 15:52:08 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>61 seconds (61493 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45474 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation()'><b>forgotpasswordValidation</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Entered email id is incorrect, try again.] but found [wrong Email id]
+	at Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation(LoginPageTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1947683363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1947683363'><pre>java.lang.AssertionError: expected [Entered email id is incorrect, try again.] but found [wrong Email id]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation(LoginPageTest.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>Softude.Hyperlocology.Tests.LoginPageTest@7d3e8655</td></tr>
+<tr>
 <td title='Softude.Hyperlocology.Tests.LoginPageTest.loginWithIncorrectPassword()'><b>loginWithIncorrectPassword</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
 <td><div><pre>java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
 	at Softude.Hyperlocology.Tests.LoginPageTest.loginWithIncorrectPassword(LoginPageTest.java:26)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace686717934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace686717934'><pre>java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1466066315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1466066315'><pre>java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -116,51 +159,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
-<td>Softude.Hyperlocology.Tests.LoginPageTest@4dc27487</td></tr>
-<tr>
-<td title='Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation()'><b>forgotpasswordValidation</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
-<td><div><pre>java.lang.AssertionError: expected [Entered email id is incorrect, try again.] but found [wrong Email id]
-	at Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation(LoginPageTest.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace264767425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace264767425'><pre>java.lang.AssertionError: expected [Entered email id is incorrect, try again.] but found [wrong Email id]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at Softude.Hyperlocology.Tests.LoginPageTest.forgotpasswordValidation(LoginPageTest.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>4</td>
-<td>Softude.Hyperlocology.Tests.LoginPageTest@4dc27487</td></tr>
+<td>1</td>
+<td>Softude.Hyperlocology.Tests.LoginPageTest@7d3e8655</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -171,20 +171,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Softude.Hyperlocology.Tests.LoginPageTest.loginWithValidCredentials()'><b>loginWithValidCredentials</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
+<td title='Softude.Hyperlocology.Tests.LoginPageTest.loginwithIncorrectEmail()'><b>loginwithIncorrectEmail</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
 <td></td>
-<td>5</td>
-<td>Softude.Hyperlocology.Tests.LoginPageTest@4dc27487</td></tr>
+<td>1</td>
+<td>Softude.Hyperlocology.Tests.LoginPageTest@7d3e8655</td></tr>
 <tr>
 <td title='Softude.Hyperlocology.Tests.LoginPageTest.logoutValidation()'><b>logoutValidation</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
 <td></td>
-<td>8</td>
-<td>Softude.Hyperlocology.Tests.LoginPageTest@4dc27487</td></tr>
+<td>6</td>
+<td>Softude.Hyperlocology.Tests.LoginPageTest@7d3e8655</td></tr>
 <tr>
-<td title='Softude.Hyperlocology.Tests.LoginPageTest.loginwithIncorrectEmail()'><b>loginwithIncorrectEmail</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
+<td title='Softude.Hyperlocology.Tests.LoginPageTest.loginWithValidCredentials()'><b>loginWithValidCredentials</b><br>Test class: Softude.Hyperlocology.Tests.LoginPageTest</td>
 <td></td>
-<td>2</td>
-<td>Softude.Hyperlocology.Tests.LoginPageTest@4dc27487</td></tr>
+<td>4</td>
+<td>Softude.Hyperlocology.Tests.LoginPageTest@7d3e8655</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -199,8 +199,8 @@ function toggleAllBoxes() {
 <td><div><pre>java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
 	at Softude.Hyperlocology.Tests.LoginPageTest.loginWithIncorrectPassword(LoginPageTest.java:26)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2105078741", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2105078741'><pre>java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1280452839", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1280452839'><pre>java.lang.AssertionError: expected [wrong passwrod please enter correct password] but found [Wrong email or password, please try again.]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -235,8 +235,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>Softude.Hyperlocology.Tests.LoginPageTest@4dc27487</td></tr>
+<td>1</td>
+<td>Softude.Hyperlocology.Tests.LoginPageTest@7d3e8655</td></tr>
 </table><p>
 </body>
 </html>

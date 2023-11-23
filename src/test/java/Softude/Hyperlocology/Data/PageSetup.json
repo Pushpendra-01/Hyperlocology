@@ -1,0 +1,27 @@
+[
+{
+"Description":"test data comming from the external jason file",
+"TheSetup":"Setup text are comming from the external file",
+"YourLocalExpertise":" Your local experties data is comming from extrnal data",
+"CompaignStart":"21 Nov 2023",
+"Insights":" insights data is comming from external json file",
+"VedioName":"Vedio name for testing",
+"VedioUrl":"https://www.youtube.com/watch?v=Fx8dvxQ_9aQ&ab_channel=TheViralFever"
+},
+
+{
+"Description":"test data ",
+"TheSetup":"Setup text are comming from the external file",
+"YourLocalExpertise":" Your local experties data is comming ",
+"CompaignStart":"22 Nov 2023",
+"Insights":" insights data is comming from external json file",
+"VedioName":"Vedio name for testing",
+"VedioUrl":"https://www.youtube.com/watch?v=avO3RDldfKI&ab_channel=TheViralFever"
+}
+
+
+
+
+
+
+]

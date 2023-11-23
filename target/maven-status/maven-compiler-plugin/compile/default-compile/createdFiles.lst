@@ -1,0 +1,12 @@
+Softude\Hyperlocology\resources\ExtentReporterNG.class
+Softude\Hyperlocology\pageobjects\Brands.class
+Softude\Hyperlocology\pageobjects\AttachCollateral.class
+Softude\Hyperlocology\pageobjects\ParentCompanies.class
+Softude\Hyperlocology\abstractComponents\AbstractComponents.class
+Softude\Hyperlocology\pageobjects\LocationPage.class
+Softude\Hyperlocology\pageobjects\PageSetup.class
+Softude\Hyperlocology\pageobjects\ReportConfig.class
+Softude\Hyperlocology\pageobjects\LandingPage.class
+Softude\Hyperlocology\pageobjects\SubscriptionPage.class
+Softude\Hyperlocology\pageobjects\EditBrandPage.class
+Softude\Hyperlocology\utils\LoginPageLocators.class

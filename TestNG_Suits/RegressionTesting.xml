@@ -8,6 +8,12 @@
     <classes>
       <class name="Softude.Hyperlocology.Tests.LoginPageTest"/>
       <class name="Softude.Hyperlocology.Tests.ParentCompaniesTest"/>
+      <class name="Softude.Hyperlocology.Tests.BrandsTest"/>
+      <class name="Softude.Hyperlocology.Tests.EditBrandPageTest"/>
+      <class name="Softude.Hyperlocology.Tests.AttachCollateralTest"/>
+      <class name="Softude.Hyperlocology.Tests.LocationPageTest"/>
+      <class name="Softude.Hyperlocology.Tests.SubscriptionPageTest"/>
+      <class name="Softude.Hyperlocology.Tests.PageSetupPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Regression -->
