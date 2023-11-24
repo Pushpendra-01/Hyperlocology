@@ -44,6 +44,12 @@ public class ParentCompanies extends AbstractComponents {
 	WebElement brandsPage;
 	@FindBy(id="parsley-id-11")
 	WebElement errorMessage;
+	@FindBy(css="#datatable_filter input[type='search']")
+	WebElement searchBar;
+	@FindBy(css=".odd td:nth-of-type(3)")
+	WebElement companyNames;
+	@FindBy(css=".odd td:nth-of-type(4)")
+	WebElement companyOwner;
 	
 	public void addParentCompany(String CompanyName,String FirstName,String LastName,String email, String MobileNo) {
 		parentCompanies.click();
@@ -85,6 +91,23 @@ public class ParentCompanies extends AbstractComponents {
 	public String getErrorMessage() {
 		return errorMessage.getText();
 		
+	}
+	public String searchParentCompany(String CompanyName) throws InterruptedException {
+		waitingForElementToBeClickable(parentCompanies);
+		parentCompanies.click();
+		waitingForElementToBeVisible(searchBar);
+		searchBar.sendKeys(CompanyName);
+		Thread.sleep(2000);
+		String expectedCompany=companyNames.getText();
+		return expectedCompany;
+	}
+	public String OwnerName(String CompanyName) throws InterruptedException {
+		waitingForElementToBeClickable(parentCompanies);
+		parentCompanies.click();
+		waitingForElementToBeVisible(searchBar);
+		searchBar.sendKeys(CompanyName);
+		Thread.sleep(2000);
+        return companyOwner.getText();		
 	}
 	
 }

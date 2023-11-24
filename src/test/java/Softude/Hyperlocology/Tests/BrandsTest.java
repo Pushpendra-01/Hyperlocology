@@ -20,7 +20,7 @@ public class BrandsTest extends BaseTest{
 		brands.selectParentComapny("Hello");
 		brands.disablePaymentThroughPortal();
 		brands.sendEmailNotification();
-		brands.ChangeStatus();
+		brands.ChangeStatus(); 	
 		brands.activeAutoRenew();
 		brands.uploadBrandLogo("C:\\Users\\Sipl\\Downloads\\companylogo.jpg");
 		brands.selectDashboardLastUpdate("March","2024","12");

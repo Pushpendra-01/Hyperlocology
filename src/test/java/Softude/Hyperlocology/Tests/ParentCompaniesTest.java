@@ -22,8 +22,21 @@ public class ParentCompaniesTest extends BaseTest {
 	    parentCompanies.sendEmailNotification();
 	    parentCompanies.attachCompanyLogo("C:\\Users\\Sipl\\Downloads\\companylogo.jpg");
 	    parentCompanies.saveParentCompany();
-	    Assert.assertEquals("This value should be a valid email.", parentCompanies.getErrorMessage());
+	    Assert.assertEquals("This value seems to be invalid.", parentCompanies.getErrorMessage());
 	}
+	@Test
+	public void checkWheaterThisCompanyIsPresent() throws InterruptedException {
+		Softude.Hyperlocology.pageobjects.ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
+	    String expectedComp=parentCompanies.searchParentCompany("Hello");
+	    Assert.assertEquals("Hello",expectedComp);
+	}
+	@Test
+	public void validateCompanyOwner() throws InterruptedException {
+		Softude.Hyperlocology.pageobjects.ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
+	    String expectedOwner=parentCompanies.OwnerName("Hello");
+	    Assert.assertEquals(expectedOwner,"Naresh Patidar");
+	}
+	
 }
 
 
