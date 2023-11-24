@@ -167,7 +167,7 @@
     </profile>
     
      <profile>
-      <id>Brands_ParentCompanies</id>
+      <id>ParentCompanies</id>
       <build>
         <plugins>
           <plugin>
