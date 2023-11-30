@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-24T17:11:52 IST" name="Default suite" finished-at="2023-11-24T17:12:06 IST" duration-ms="14007">
+  <suite started-at="2023-11-30T11:28:39 IST" name="Default suite" finished-at="2023-11-30T11:28:57 IST" duration-ms="17728">
     <groups>
     </groups>
-    <test started-at="2023-11-24T17:11:52 IST" name="Default test" finished-at="2023-11-24T17:12:06 IST" duration-ms="14007">
-      <class name="Softude.Hyperlocology.Tests.ParentCompaniesTest">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Softude.Hyperlocology.Tests.ParentCompaniesTest@4c583ecf]" started-at="2023-11-24T17:11:52 IST" name="lauchApplication" finished-at="2023-11-24T17:11:56 IST" duration-ms="3709" status="PASS">
+    <test started-at="2023-11-30T11:28:39 IST" name="Default test" finished-at="2023-11-30T11:28:57 IST" duration-ms="17728">
+      <class name="Softude.Hyperlocology.Tests.GroupsPageTest">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Softude.Hyperlocology.Tests.GroupsPageTest@368f2016]" started-at="2023-11-30T11:28:39 IST" name="lauchApplication" finished-at="2023-11-30T11:28:45 IST" duration-ms="5867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="validateCompanyOwner()[pri:0, instance:Softude.Hyperlocology.Tests.ParentCompaniesTest@4c583ecf]" started-at="2023-11-24T17:11:56 IST" name="validateCompanyOwner" finished-at="2023-11-24T17:12:06 IST" duration-ms="10093" status="PASS">
+        <test-method signature="addNewGroup()[pri:0, instance:Softude.Hyperlocology.Tests.GroupsPageTest@368f2016]" started-at="2023-11-30T11:28:45 IST" name="addNewGroup" finished-at="2023-11-30T11:28:57 IST" duration-ms="11690" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCompanyOwner -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Softude.Hyperlocology.Tests.ParentCompaniesTest@4c583ecf]" started-at="2023-11-24T17:12:06 IST" name="tearDown" finished-at="2023-11-24T17:12:06 IST" duration-ms="162" status="PASS">
+        </test-method> <!-- addNewGroup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Softude.Hyperlocology.Tests.GroupsPageTest@368f2016]" started-at="2023-11-30T11:28:57 IST" name="tearDown" finished-at="2023-11-30T11:28:57 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Softude.Hyperlocology.Tests.ParentCompaniesTest -->
+      </class> <!-- Softude.Hyperlocology.Tests.GroupsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

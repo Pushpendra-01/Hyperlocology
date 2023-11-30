@@ -1,0 +1,22 @@
+[
+{
+"BrandName":"Eggs-(BD449228)",
+"PageTitle":"TestingTitle",
+"PlanTitle":"TestingPlanTitle",
+"LocationListTitle":"TestingLocationListTitle",
+"DescriptionText":" Hello this is the Automated description Text comming from the outer file",
+"Note":"Hello this is the Automated Note Text comming from the outer file",
+"ContactEmail":"rajeev@yopmail.com"
+},
+
+{
+"BrandName":"Mira Dry-(BD290959)",
+"PageTitle":"TestingTitle",
+"PlanTitle":"TestingPlanTitle",
+"LocationListTitle":"TestingLocationListTitle",
+"DescriptionText":" Hello this is the Automated description Text comming from the outer file",
+"Note":"Hello this is the Automated Note Text comming from the outer file",
+"ContactEmail":"pranav@yopmail.com"
+}
+
+]

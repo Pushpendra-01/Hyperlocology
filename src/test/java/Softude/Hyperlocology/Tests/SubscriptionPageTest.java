@@ -16,11 +16,10 @@ public class SubscriptionPageTest extends BaseTest {
 	@Test
 	public void addSubscription() throws InterruptedException {
 		ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
-		EditBrandPage editBrand=parentCompanies.goToBrandsPages();
+		Brands brand=parentCompanies.goToBrandsPage();
+		EditBrandPage editBrand=brand.goToEditBrandsPages();
 		editBrand.editBasicInformation("Automated Brand");
-		AttachCollateral attachCollateral=editBrand.goToAttachCollateralPage();
-		LocationPage locationPage=attachCollateral.goToLocationPage();
-		SubscriptionPage subscriptionPage=locationPage.goToSubscriptionPage();
+		SubscriptionPage subscriptionPage=editBrand.goToSubscriptionPage();
 		subscriptionPage.fillSubcriptionDetails("C:\\Users\\Sipl\\Downloads\\Subscription Upload Sheet_Automated Brand.xlsx");
         
 	}

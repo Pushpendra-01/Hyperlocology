@@ -50,6 +50,16 @@ public class ParentCompanies extends AbstractComponents {
 	WebElement companyNames;
 	@FindBy(css=".odd td:nth-of-type(4)")
 	WebElement companyOwner;
+	@FindBy(css="#metismenu li:nth-of-type(5)")
+	WebElement userActivity;
+	@FindBy(css="#metismenu li:nth-of-type(7)")
+	WebElement participantsPage;
+	@FindBy(css="#metismenu li:nth-of-type(8)")
+	WebElement locationsPage;
+	@FindBy(css="#metismenu li:nth-of-type(9)")
+	WebElement regionsPage;
+	@FindBy(css="#metismenu li:nth-of-type(10)")
+	WebElement groupsPage;
 	
 	public void addParentCompany(String CompanyName,String FirstName,String LastName,String email, String MobileNo) {
 		parentCompanies.click();
@@ -82,12 +92,7 @@ public class ParentCompanies extends AbstractComponents {
 		brandsPage.click();
 		return brands;
 	}
-	public EditBrandPage goToBrandsPages() {
-		waitingForElementToBeVisible(brandsPage);
-		EditBrandPage editBrand=new EditBrandPage(driver);
-		brandsPage.click();
-		return editBrand;
-	}
+	
 	public String getErrorMessage() {
 		return errorMessage.getText();
 		
@@ -109,5 +114,34 @@ public class ParentCompanies extends AbstractComponents {
 		Thread.sleep(2000);
         return companyOwner.getText();		
 	}
-	
+	public UserActivityPage goToUserActivityPage() {
+		waitingForElementToBeVisible(userActivity);
+		userActivity.click();
+		UserActivityPage useract=new UserActivityPage(driver);
+		return useract;
+	}
+	public ParticipantsPage goToParticipantPage() {
+		waitingForElementToBeVisible(participantsPage);
+		participantsPage.click();
+		ParticipantsPage participant=new ParticipantsPage(driver);
+		return participant;
+	}
+	public LocationsPage goToLocationsPage() {
+		waitingForElementToBeVisible(locationsPage);
+		locationsPage.click();
+		LocationsPage locations=new LocationsPage(driver);
+		return locations;
+	}
+	public RegionsPage goToRegionsPage() {
+		waitingForElementToBeClickable(regionsPage);
+		regionsPage.click();
+		RegionsPage region=new RegionsPage(driver);
+		return region;
+	}
+	public GroupsPage goToGroupsPage() {
+		waitingForElementToBeClickable(groupsPage);
+		groupsPage.click();
+		GroupsPage groups=new GroupsPage(driver);
+		return groups;
+	}
 }

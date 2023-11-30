@@ -92,6 +92,10 @@ public class Brands extends AbstractComponents{
     WebElement saveBtn;    
     @FindBy(id="brandLink")
 	WebElement brandsPage;
+    @FindBy(css="#metismenu li:nth-of-type(4)")
+	WebElement subscription_page;
+    @FindBy(id="brandLink")
+	WebElement editbrandsPage;
     
     
 	public void fillBrandsDetails(String BrandName,String FirstName,String LastName,String Email,String MobileNo) {
@@ -222,6 +226,18 @@ public class Brands extends AbstractComponents{
  		Brands brands=new Brands(driver);
  		brandsPage.click();
  		return brands;
+     }
+     public EditBrandPage goToEditBrandsPages() {
+ 		waitingForElementToBeVisible(brandsPage);
+ 		EditBrandPage editBrand=new EditBrandPage(driver);
+ 		brandsPage.click();
+ 		return editBrand;
+ 	}
+     public SubscriptionsPage goToSubscriptionsPage() {
+    	 waitingForElementToBeVisible(subscription_page);
+    	 subscription_page.click();
+    	 SubscriptionsPage subscritionPage=new SubscriptionsPage(driver);
+    	 return subscritionPage;
      }
 }
 

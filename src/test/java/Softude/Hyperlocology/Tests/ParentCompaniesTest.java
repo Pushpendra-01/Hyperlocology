@@ -31,7 +31,7 @@ public class ParentCompaniesTest extends BaseTest {
 	    Assert.assertEquals("Hello",expectedComp);
 	}
 	@Test
-	public void validateCompanyOwner() throws InterruptedException {
+	 public void validateCompanyOwner() throws InterruptedException {
 		Softude.Hyperlocology.pageobjects.ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
 	    String expectedOwner=parentCompanies.OwnerName("Hello");
 	    Assert.assertEquals(expectedOwner,"Naresh Patidar");

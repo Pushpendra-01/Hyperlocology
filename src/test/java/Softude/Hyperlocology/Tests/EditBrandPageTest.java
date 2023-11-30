@@ -13,8 +13,10 @@ public class EditBrandPageTest extends BaseTest {
 	@Test
 	public void editBasicInformation() throws InterruptedException {
 	ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
-	EditBrandPage editBrand=parentCompanies.goToBrandsPages();
-    editBrand.editBasicInformation("Automated Brand");
+	//EditBrandPage editBrand=parentCompanies.goToBrandsPages();
+    Brands brandsPage=parentCompanies.goToBrandsPage();
+    EditBrandPage editBrand=brandsPage.goToEditBrandsPages();
+	editBrand.editBasicInformation("Automated Brand");
 	editBrand.editBrnadName("Automation Brand");
 	editBrand.editEmail("pushpendra@yopmail.com");
 	editBrand.editFirstName("Singhs");	

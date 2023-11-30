@@ -47,11 +47,7 @@ public class LocationPage extends AbstractComponents {
 	    waitingForElementToBeClickable(uploadBtn);
 	    uploadBtn.click();
 	}
-	public SubscriptionPage goToSubscriptionPage() {
-		waitingForElementToBeClickable(subscriptionPage);
-		SubscriptionPage subscriptionPage=new SubscriptionPage(driver);
-		return subscriptionPage;
-	}
+	
 	
 
 }

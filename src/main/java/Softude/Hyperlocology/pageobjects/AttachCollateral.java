@@ -63,12 +63,8 @@ public class AttachCollateral extends AbstractComponents {
 		addBtn.click();
         System.out.println(successMsg.getText());
 	}
-	public LocationPage goToLocationPage() {
-		waitingForElementToBeClickable(locationBtn);
-		LocationPage locationPage=new LocationPage(driver);
-		locationBtn.click();
-		return locationPage;
-	}
+	
+	
    
 
 }

@@ -1,5 +1,6 @@
 package Softude.Hyperlocology.pageobjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,7 +32,7 @@ public class PageSetup extends AbstractComponents {
 	WebElement vedioName;
 	@FindBy(name="video_urls")
 	WebElement vedioUrl;
-	@FindBy(id="saveDetail")
+	@FindBy(css="button[type='submit']")
 	WebElement saveBtn;
 	@FindBy(css="a[href*='report-config']")
 	WebElement reportConfigPage;
@@ -40,7 +41,8 @@ public class PageSetup extends AbstractComponents {
 		waitingForElementToBeVisible(description);
 		description.sendKeys(Description);
 	}
-	public void howItWorks(String TheSetup, String YourLocalExpertise, String CompaignStart, String Insights, String VedioName, String VedioUrl) {
+	public void howItWorks(String TheSetup, String YourLocalExpertise, String CompaignStart, String Insights, String VedioName, String VedioUrl) throws InterruptedException {
+		loadingPageDescription(VedioUrl);
 		waitingForElementToBeClickable(howItworks);
 		howItworks.click();
 		waitingForElementToBeVisible(theSetup);
@@ -50,9 +52,8 @@ public class PageSetup extends AbstractComponents {
 		insights.sendKeys(Insights);
 		vedioName.sendKeys(VedioName);
 		vedioUrl.sendKeys(VedioUrl);
-		waitingForInvisibilityofOverlappingElement();
-		waitingForElementToBeClickable(saveBtn);
-		saveBtn.click();
+//		waitingForElementToBeClickable(saveBtn);
+//		saveBtn.click();
 	}
 	public ReportConfig goToReportConfigPage() {
 		waitingForElementToBeClickable(reportConfigPage);

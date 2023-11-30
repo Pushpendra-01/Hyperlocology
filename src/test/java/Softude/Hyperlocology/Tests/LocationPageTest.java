@@ -15,10 +15,10 @@ public class LocationPageTest extends BaseTest {
 	@Test
 	public void addLocation() throws InterruptedException {
 		ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
-		EditBrandPage editBrand=parentCompanies.goToBrandsPages();
+		Brands brand=parentCompanies.goToBrandsPage();
+		EditBrandPage editBrand=brand.goToEditBrandsPages();
 		editBrand.editBasicInformation("Automated Brand");
-		AttachCollateral attachCollateral=editBrand.goToAttachCollateralPage();
-		LocationPage locationPage=attachCollateral.goToLocationPage();
+		LocationPage locationPage=editBrand.goToLocationPage();
 		locationPage.addLocation("C:\\Users\\Sipl\\Downloads\\Location Upload Sheet_Automated Brand.xlsx");
 	}
 

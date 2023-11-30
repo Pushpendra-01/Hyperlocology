@@ -55,10 +55,28 @@ public class EditBrandPage extends AbstractComponents {
 	WebElement subscriptionPage;
 	@FindBy(name="participant_sub_mass_upload")
 	WebElement addSubscriptionFile;
+	@FindBy(xpath="(//input[@type='search'])[2]")
+	WebElement search;
+	@FindBy(css="a[href*='page-setup']")
+	WebElement pageSetup_Page;
+	@FindBy(css="a[href*='report-config/campaign']")
+	WebElement reportConfigPage;
+	@FindBy(css="ul[role='tablist'] li:nth-of-type(7)")
+	WebElement brandUser;
+	@FindBy(css="a[href*='resource-center']")
+	WebElement resourceCenter;
+	@FindBy(css="a[href*='master-login']")
+	WebElement masterLoginPage;
 	
-	public void editBasicInformation(String BrandName) throws InterruptedException {
+	
+	
+    	public void editBasicInformation(String BrandName) throws InterruptedException {
 		Thread.sleep(2000);
+		search.sendKeys(BrandName);
+        Thread.sleep(1000);
 		WebElement brandName=brands.stream().filter(b->b.getText().equalsIgnoreCase(BrandName)).findFirst().orElse(null);
+		waitingForElementToBeVisible(brandName);
+		waitingForElementToBeClickable(brandName);
 		brandName.click();
 	}
 		public void editBrnadName(String newBrandName) {
@@ -125,6 +143,46 @@ public class EditBrandPage extends AbstractComponents {
 		attachCollateral.click();
 		return attachCollatreal;
 	}
-	
-
+	public SubscriptionPage goToSubscriptionPage() {
+		waitingForElementToBeClickable(subscriptionPage);
+		SubscriptionPage subscriptionPage=new SubscriptionPage(driver);
+		return subscriptionPage;
+	}
+	public LocationPage goToLocationPage() {
+		waitingForElementToBeClickable(locationBtn);
+		LocationPage locationPage=new LocationPage(driver);
+		locationBtn.click();
+		return locationPage;
+	}
+	public PageSetup goToPageSetup() {
+		waitingForElementToBeClickable(pageSetup_Page);
+		PageSetup pageSetup=new PageSetup(driver);
+		pageSetup_Page.click();
+		return pageSetup;
+	}
+	public ReportConfig goToReportConfigPage() {
+		waitingForElementToBeClickable(reportConfigPage);
+		reportConfigPage.click();
+		ReportConfig reportConfig=new ReportConfig(driver);
+		return reportConfig;
+	}
+	public BrandUserPage goToBrandUserPage() {
+		waitingForElementToBeClickable(brandUser);
+		brandUser.click();
+		BrandUserPage brandUserPage=new BrandUserPage(driver);
+		return brandUserPage;
+	}
+	public ResourceCenterPage goToResourceCenterPage() {
+		waitingForElementToBeVisible(resourceCenter);
+		resourceCenter.click();
+		ResourceCenterPage resourceCenterPage=new ResourceCenterPage(driver);
+		return resourceCenterPage;
+	}
+	public MasterLoginPage goToMasterLoginPage() {
+		waitingForElementToBeVisible(masterLoginPage);
+		masterLoginPage.click();
+		MasterLoginPage masterLogin=new MasterLoginPage(driver);
+		return masterLogin;
+	}
+    
 }
