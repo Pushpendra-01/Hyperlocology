@@ -140,7 +140,7 @@
             <version>3.2.2</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>TestNG_Suits/LocationPage.xml</suiteXmlFile>
+                <suiteXmlFile>TestNG_Suits/Brands_LocationPage.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>
@@ -194,7 +194,7 @@
             <version>3.2.2</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>TestNG_Suits/SubscriptionPage.xml</suiteXmlFile>
+                <suiteXmlFile>TestNG_Suits/Brands_SubscriptionPage.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>
@@ -220,9 +220,197 @@
       </build>
     </profile>
     
+    <profile>
+      <id>Brands_UserPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/Brands_UserPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>GroupsPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/GroupsPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>LocationssPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/LocationsPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>MasterLoginPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/MasterLoginPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>ParticipantsPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/ParticipantsPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>RegionsPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/RegionsPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>ReportConfigPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/ReportConfigPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>ResourceCenterPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/ResourceCenterPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>SubscriptionsPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/SubscriptionsPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    
+  <profile>
+      <id>UserActivityPage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>TestNG_Suits/UserActivityPage.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
   </profiles>
 
-  
 	
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

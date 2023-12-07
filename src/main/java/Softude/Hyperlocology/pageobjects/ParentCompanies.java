@@ -60,6 +60,12 @@ public class ParentCompanies extends AbstractComponents {
 	WebElement regionsPage;
 	@FindBy(css="#metismenu li:nth-of-type(10)")
 	WebElement groupsPage;
+	@FindBy(css="#metismenu li:nth-of-type(11)")
+	WebElement campaignSetup;
+	@FindBy(css="#metismenu li:nth-of-type(12)")
+	WebElement directMailSetup;
+	@FindBy(css="#metismenu li:nth-of-type(13)")
+	WebElement viewReports;
 	
 	public void addParentCompany(String CompanyName,String FirstName,String LastName,String email, String MobileNo) {
 		parentCompanies.click();
@@ -144,4 +150,10 @@ public class ParentCompanies extends AbstractComponents {
 		GroupsPage groups=new GroupsPage(driver);
 		return groups;
 	}
+    public CampaignSetup goToCampaignSetupPage() {
+    	waitingForElementToBeClickable(campaignSetup);
+    	campaignSetup.click();
+    	CampaignSetup campaign=new CampaignSetup(driver);
+    	return campaign;
+    }
 }
