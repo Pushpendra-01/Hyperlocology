@@ -1,5 +1,7 @@
 package Softude.Hyperlocology.pageobjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,14 +27,21 @@ public class CampaignSetup extends AbstractComponents{
 	@FindBy(css="#datatable tr td:nth-of-type(9) span")
 	WebElement status;
 	@FindBy(css="#datatable tr td:nth-of-type(5)")
-	WebElement compaignType;
+	List<WebElement> compaignType;
 	
-	public void getBrandName(String CampaignName) throws InterruptedException {
+	public String getBrandName(String CampaignName) throws InterruptedException {
 		waitingForElementToBeVisible(searchBox);
-		searchBox.sendKeys();
-		Thread.sleep(1000);
-		brandName.getText();
-		
+		searchBox.sendKeys(CampaignName);
+		Thread.sleep(2000);
+		return brandName.getText();
 	}
+	public String validateTheCampaignType(String CampaignName) throws InterruptedException {
+		waitingForVisibilityOfAllTheElement(compaignType);
+		searchBox.sendKeys(CampaignName);
+		Thread.sleep(1000);
+		String compType=compaignType.get(0).getText();
+		return compType;
+	}
+	
 
 }

@@ -13,7 +13,7 @@ public class BrandsTest extends BaseTest{
 		ParentCompanies parentCompanies=loginPage.login("pooja.saratkar@softude.com","Pooja##12345");
 		Brands brands=parentCompanies.goToBrandsPage();
 		brands.fillBrandsDetails("Automated Brand2","Softude","Systematrix","softude@yopmail.in","8745963210");
-		brands.selectStartDate("December","2023","11");
+		brands.selectStartDate("March","2024","11");
 		brands.selectSubscriptionMonth("20");
 		brands.fillSubscriptionDeatils("Hello this subscription deatils is filled by the automation script");
 		brands.selectSpecificRegion("Ease");
@@ -23,7 +23,7 @@ public class BrandsTest extends BaseTest{
 		brands.ChangeStatus(); 	
 		brands.activeAutoRenew();
 		brands.uploadBrandLogo("C:\\Users\\Sipl\\Downloads\\companylogo.jpg");
-		brands.selectDashboardLastUpdate("March","2024","12");
+		brands.selectStartDate("March","2024","12");
 //		brands.saveBrand();
 	}
 	

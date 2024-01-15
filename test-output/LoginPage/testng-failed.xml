@@ -8,10 +8,9 @@
     <classes>
       <class name="Softude.Hyperlocology.Tests.LoginPageTest">
         <methods>
-          <include name="loginWithIncorrectPassword"/>
           <include name="forgotpasswordValidation"/>
+          <include name="loginWithIncorrectPassword"/>
           <include name="lauchApplication"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- Softude.Hyperlocology.Tests.LoginPageTest -->
     </classes>

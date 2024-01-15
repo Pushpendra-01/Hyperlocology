@@ -96,7 +96,8 @@ public class Brands extends AbstractComponents{
 	WebElement subscription_page;
     @FindBy(id="brandLink")
 	WebElement editbrandsPage;
-    
+    @FindBy(css=".ui-datepicker-title")
+    WebElement calendarTitle;
     
 	public void fillBrandsDetails(String BrandName,String FirstName,String LastName,String Email,String MobileNo) {
 		addBtn.click();
@@ -109,9 +110,19 @@ public class Brands extends AbstractComponents{
 	}
 	public void selectStartDate(String Month,String Year,String Date) {
 		startDate.click();
-		waitingForElementToBeVisible(month);
-		
-		while(true) {
+		waitingForElementToBeVisible(calendarTitle);
+		/*while(true) {
+			String title=calendarTitle.getText();
+			if(title.equalsIgnoreCase(Month_Year)) {
+				break;
+			}
+			else {
+				nextBtn.click();
+			}
+		}
+*/		
+        
+        while(true) {
 			String selectedMonth=month.getText();
 //	        System.out.println(selectedMonth);
 			if(selectedMonth.equals(Month)) {
@@ -145,6 +156,7 @@ public class Brands extends AbstractComponents{
          js.executeScript("window.scrollBy(0,500)");
 
      }
+		
      public void fillSubscriptionDeatils(String subscriptionDetails) {
     	 driver.switchTo().frame(frame1);
     	 textField.sendKeys(subscriptionDetails);

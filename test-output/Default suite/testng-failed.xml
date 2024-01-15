@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Softude.Hyperlocology.Tests.GroupsPageTest">
+      <class name="Softude.Hyperlocology.Tests.BrandsTest">
         <methods>
-          <include name="addNewGroup"/>
           <include name="lauchApplication"/>
+          <include name="addNewBrand"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Softude.Hyperlocology.Tests.GroupsPageTest -->
+      </class> <!-- Softude.Hyperlocology.Tests.BrandsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
